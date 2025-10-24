@@ -1,9 +1,10 @@
 - hosts: node01
   vars:
-          pkgs_name: samba
+          pkgs_name: httpd
   tasks:
           - name: install pkgs
             yum:
                   name: "{{ pkgs_name }}"
                   state: present
+
 
