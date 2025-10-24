@@ -1,5 +1,9 @@
-  hosts: all
+- hosts: node01
+  vars:
+          pkgs_name: samba
   tasks:
-          debug:
-                msg: 'hello awx'
+          - name: install pkgs
+            yum:
+                  name: "{{ pkgs_name }}"
+                  state: present
 
